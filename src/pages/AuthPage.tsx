@@ -7,12 +7,12 @@ import {Label} from '@/components/ui/label'
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 import {Brain, ArrowLeft, Eye, EyeOff, Mail, Loader2, CheckCircle} from 'lucide-react'
 import {useAuth} from '@/contexts/AuthContext'
-import {useToast} from '@/hooks/use-toast'
+import { toast } from "sonner";
 
 export default function AuthPage() {
  const navigate = useNavigate()
  const {login, signup, verifyEmail, resendVerification, forgotPassword, needsVerification, isVerifying} = useAuth()
- const {toast} = useToast()
+//  const {toast} = useToast()
 
  const [isLoading, setIsLoading] = useState(false)
  const [verificationCode, setVerificationCode] = useState('')

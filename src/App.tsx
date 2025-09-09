@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
-import {Toaster} from '@/components/ui/toaster'
+import {Toaster} from '@/components/ui/sonner'
 import {AuthProvider} from '@/contexts/AuthContext'
 import {SupabaseProvider} from '@/contexts/SupabaseContext'
 import HomePage from '@/pages/HomePage'
@@ -44,5 +44,8 @@ export default function App() {
     </Router>
    </SupabaseProvider>
   </QueryClientProvider>
+//  <div className="p-10 bg-red-500 text-white text-2xl">
+//       🚀 Tailwind is working!
+//     </div>
  )
 }

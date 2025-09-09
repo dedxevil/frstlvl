@@ -6,13 +6,14 @@ import {Input} from '@/components/ui/input'
 import {Label} from '@/components/ui/label'
 import {Brain, Eye, EyeOff, Loader2, CheckCircle, AlertTriangle} from 'lucide-react'
 import {useSupabase} from '@/contexts/SupabaseContext'
-import {useToast} from '@/hooks/use-toast'
+// import {useToast} from '@/hooks/use-toast'
+import { toast } from "sonner";
 
 export default function ResetPasswordPage() {
  const navigate = useNavigate()
  const [searchParams] = useSearchParams()
  const {resetPassword} = useSupabase()
- const {toast} = useToast()
+//  const {toast} = useToast()
 
  const [token, setToken] = useState('')
  const [newPassword, setNewPassword] = useState('')

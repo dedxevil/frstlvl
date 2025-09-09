@@ -12,12 +12,12 @@ import {
   Award, Lightbulb, Star, Zap
 } from 'lucide-react';
 import { useSupabase } from '@/contexts/SupabaseContext';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from "sonner";
 
 export default function AnalyticsDashboard() {
   const { quizId } = useParams();
   const navigate = useNavigate();
-  const { toast } = useToast();
+  // const { toast } = toast();
   const { getQuizAnalytics, generateAIInsights } = useSupabase();
   
   const [insights, setInsights] = useState<any>(null);

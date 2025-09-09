@@ -11,14 +11,14 @@ import {Checkbox} from '@/components/ui/checkbox'
 import {Plus, Brain, Users, Clock, Search, Filter, BarChart3, Settings, LogOut, Eye, Download, Calendar, AlertTriangle, CheckCircle, Link, X, RefreshCw, Edit, Send, Mail, Trash2} from 'lucide-react'
 import {useAuth} from '@/contexts/AuthContext'
 import {useSupabase} from '@/contexts/SupabaseContext'
-import {useToast} from '@/hooks/use-toast'
+import { toast } from "sonner";
 import { resend } from '../lib/resend';
 
 export default function EmployerDashboard() {
  const navigate = useNavigate()
  const {user, logout} = useAuth()
  const {getUserQuizzes, getQuizCandidates, updateQuizQuestions, addCandidatesToExistingQuiz, getQuestionsByTopic} = useSupabase()
- const {toast} = useToast()
+//  const {toast} = useToast()
 
  // All hooks at the top level - no conditional calls
  const [searchTerm, setSearchTerm] = useState('')

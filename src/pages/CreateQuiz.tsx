@@ -10,7 +10,7 @@ import {Checkbox} from '@/components/ui/checkbox'
 import {Progress} from '@/components/ui/progress'
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
 import {Brain, ArrowLeft, Plus, Trash2, CheckCircle, Copy, CreditCard, Upload, Mail, Send, ExternalLink, Calendar, Download, Database, Search, Users, RefreshCw, ArrowRight, AlertTriangle} from 'lucide-react'
-import {useToast} from '@/hooks/use-toast'
+import { toast } from "sonner";
 import {useSupabase} from '@/contexts/SupabaseContext'
 import {useAuth} from '@/contexts/AuthContext'
 import { resend } from '../lib/resend';
@@ -19,7 +19,7 @@ import { resend } from '../lib/resend';
 
 export default function CreateQuiz() {
  const navigate = useNavigate()
- const {toast} = useToast()
+//  const {toast} = useToast()
  const {user} = useAuth()
  const {createQuiz, generateQuestions, saveQuizQuestions, addCandidates, getAvailableTopics, addQuestionsToBank, getQuestionTemplate, importQuestionsFromXLSX, getQuestionsByTopic, getUserQuizzes, getQuizCandidates} = useSupabase()
 

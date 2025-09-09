@@ -4,8 +4,8 @@ import React, { createContext, useContext } from "react";
 import { createClient } from "@supabase/supabase-js";
 import * as XLSX from "xlsx";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = 'https://qwgbgcmhhjxinzlmeuys.supabase.co' //= process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3Z2JnY21oaGp4aW56bG1ldXlzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY1NjEyMjEsImV4cCI6MjA3MjEzNzIyMX0.eJ9bWIgOxMuB-3YKR-54_ElHDGvDgTYWGYxrE4eEOpk' //= process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 type SupabaseContextType = {

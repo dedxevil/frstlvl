@@ -6,7 +6,8 @@ import {Progress} from '@/components/ui/progress'
 import {Badge} from '@/components/ui/badge'
 import {Alert, AlertDescription} from '@/components/ui/alert'
 import {Clock, ArrowRight, ArrowLeft, Flag, CheckCircle, AlertTriangle, Brain, Zap, Star, Shield} from 'lucide-react'
-import {useToast} from '@/hooks/use-toast'
+// import {useToast} from '@/hooks/use-toast'
+import { toast } from "sonner";
 import VideoProctoring from '@/components/VideoProctoring'
 
 interface Question {
@@ -39,7 +40,7 @@ interface ProctoringData {
 export default function QuizInterface() {
  const {linkId} = useParams()
  const navigate = useNavigate()
- const {toast} = useToast()
+//  const {toast} = useToast()
 
  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
  const [answers, setAnswers] = useState<Record<string, string>>({})

@@ -7,14 +7,14 @@ import {Checkbox} from '@/components/ui/checkbox'
 import {Badge} from '@/components/ui/badge'
 import {Alert, AlertDescription} from '@/components/ui/alert'
 import {Clock, Video, Shield, AlertTriangle, CheckCircle, Eye, Brain, Timer, Camera, Sparkles, Zap, Monitor, Mic, Building, User, Calendar} from 'lucide-react'
-import {useToast} from '@/hooks/use-toast'
+import { toast } from "sonner";
 import {useSupabase} from '@/contexts/SupabaseContext'
 import CandidatePortal from '@/components/CandidatePortal'
 
 export default function CandidateInstructions() {
  const {linkId} = useParams()
  const navigate = useNavigate()
- const {toast} = useToast()
+//  const {toast} = useToast()
  const {getCandidateByLink} = useSupabase()
 
  const [agreedToTerms, setAgreedToTerms] = useState(false)
